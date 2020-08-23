@@ -1,0 +1,6 @@
+FROM sasicontainer.azurecr.io/common/aws-client:0.0
+RUN apt-get update && apt-get install -yy less
+RUN apt-get -s clean
+COPY . .
+RUN ./bucketread.sh
+CMD ./bucketread.sh

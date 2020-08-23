@@ -1,0 +1,9 @@
+version: "1"
+registry_credential_outputs:
+  task_execution_role: ecsTaskExecutionRole
+  container_credentials:
+    sasicontainerConnection:
+      credentials_parameter: arn:aws:secretsmanager:eu-central-1:717206073145:secret:sasicontainerConnection-O7DlOx
+      container_names:
+      - db
+      - wordpress
